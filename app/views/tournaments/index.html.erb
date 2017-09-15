@@ -1,8 +1,1 @@
-<h1>Mad Tournaments!!!</h1>
-<ul>
-
- <% @tournaments.each do |tourny| %>
-  <li> <%= link_to(tourny.name, tournament_path(tourny)) %>
-  </li>
- <% end %>
-</ul>
+<%= render 'tournaments' %>
