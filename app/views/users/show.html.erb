@@ -1,2 +1,10 @@
 <h1><%= @user.username %></h1>
 <h1><%= @user.email %></h1>
+
+<h1>Is a part of these Tournaments</h1>
+
+<ul>
+<% @user.tournaments.each do |tourny| %>
+<li><%=tourny.name %></li>
+<% end %>
+</ul>
