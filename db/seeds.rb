@@ -47,8 +47,8 @@ t4.users << User.find_by(username:"PK Banks")
 
 
 
-g1 = Game.new(name:"WoW")
-g2 = Game.new(name:"Call of Duty")
-g3 = Game.new(name:"Fifa")
-g4 = Game.new(name:"Madden")
-g5 = Game.new(name:"Halo")
+# g1 = Game.new(name:"WoW")
+# g2 = Game.new(name:"Call of Duty")
+# g3 = Game.new(name:"Fifa")
+# g4 = Game.new(name:"Madden")
+# g5 = Game.new(name:"Halo")
