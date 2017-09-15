@@ -9,10 +9,19 @@
   </head>
 
   <body>
-    <%= link_to("GamerLink", root_path) %>
-    <%= link_to("Tournaments", tournaments_path) %>
-    <%= link_to("Players", users_path) %>
-
-    <%= yield %>
+<header class= "nav navbar-nav-fixed-top navbar-inverse">
+  <%= link_to "GML HOME logo", "#" %>
+        <nav>
+          <ul class= "navbar">
+            <button><li><%= link_to("GamerLink", root_path) %></li></button>
+            <button><li><%= link_to("Tournaments", tournaments_path) %></li></button>
+            <button><li><%= link_to("Players", users_path) %></li></button>
+          </ul>
+        </nav>
+      </div>
+</header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
-</html>
+  </html>

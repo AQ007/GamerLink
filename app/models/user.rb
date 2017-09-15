@@ -10,4 +10,5 @@ class User < ApplicationRecord
   validates(:password,
     presence: true,
     length: {minimum:4, maximum:50})
+
 end

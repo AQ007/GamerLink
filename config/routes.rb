@@ -9,13 +9,15 @@ Rails.application.routes.draw do
 
   get 'users/new' => 'users#new'
 
+
   get 'fail' => 'welcome#fail'
+
 
   # get 'users/:id' => 'users#show'
   get 'users/:id' => 'users#show', as: "user"
   post '/users' => 'users#create'
 
-
+  post '/users' => 'users#create'
 
 
   # resources :users
