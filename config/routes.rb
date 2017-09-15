@@ -18,10 +18,10 @@ Rails.application.routes.draw do
   # get 'users/:id' => 'users#show'
   get 'users/:id' => 'users#show', as: "user"
   post '/users' => 'users#create'
+  post '/tournaments' => 'tournaments#create'
 
 
-
-  # resources :users
+  resources :games
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
