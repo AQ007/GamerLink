@@ -1,16 +1,4 @@
-<h1>Succesfull sign-up</h1>
+<h1><%= @user.username %></h1>
+<h1><%= @user.email %></h1>
 
-<p>
-  <strong>Username:</strong>
-  <%= @users.username %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @users.password %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @users.email %>
-</p>
+<%= link_to("players", users_path) %>
