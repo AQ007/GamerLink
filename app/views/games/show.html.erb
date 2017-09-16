@@ -1,2 +1,8 @@
 <h1>Here is your game</h1>
 <h1><%= @game.name %></h1>
+
+<h3>Tournaments available</h3>
+
+<% @game.tournaments.each do |g| %>
+<li><%=g.name%></li>
+<% end %>
