@@ -1,4 +1,81 @@
-<h1>GamerLink</h1>
+<!-- <h1>GamerLink</h1> -->
 
-<%= render 'tournaments/tournaments'%>
-<%= render 'users/users'%>
+<!-- <%= render 'tournaments/tournaments'%>
+<%= render 'users/users'%> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GamerLink</title>
+  </head>
+  <body>
+    <h1>Welcome to GamerLink</h1>
+      <div class="form-style-6">
+        <h1> SIGN UP</h1>
+        <form>
+
+          <%= form_with model: User.new do |form| %>
+
+          <p>
+            <%= form.label :username %><br>
+            <%= form.text_field :username %>
+          </p>
+
+          <p>
+            <%= form.label :email %><br>
+            <%= form.text_field :email %>
+          </p>
+
+          <p>
+            <%= form.label :password %><br>
+            <%= form.text_field :password %>
+          </p>
+
+          <p>
+            <%= form.submit %>
+          </p>
+          <% end %>
+        </form>
+      </div>
+<!--       <div class="Sign_Up">
+  <a class="button" <%= link_to("Sign Up", users_new_path)%> </a>
+  </div> -->
+<!--       <div id="cf">
+  <img class="bottom" src="/images/evo.png" />
+  <img class="top" src="/images/overwatch.png" />
+</div> -->
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></center>
+    <div class="Games_Tour">
+        <section class="container">
+      <div class="left">
+        <article>
+          <h1>GAMES</h1><a class="button">Explore</a>
+        </article>
+      </div>
+      <div class="right">
+        <article>
+          <h1>EVENTS</h1><a class="button">VIEW</a>
+          <a class="button">CREATE</a>
+        </article>
+      </div>
+    </section>
+    </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></center>
+
+<!--   <div class="New_Tourn">
+    <h1>HEY MAKE A NEW Tournament!!!</h1>
+
+    <%= form_with model: Tournament.new do |form| %>
+
+      <p>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+      </p>
+
+      <p>
+        <%= form.submit %>
+      </p>
+    <% end %>
+</div> -->
+  </body>
+</html>

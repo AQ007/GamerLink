@@ -3,7 +3,6 @@
   <head>
     <title>GamerLink</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -20,14 +19,14 @@
             <button><li><%= link_to("New Player", users_new_path) %></li></button>
             <button><li><%= link_to("New Tournament", tournaments_new_path) %></li></button>
 
-
+ -->
           </ul>
         </nav>
-      </div>
+
 </header>
     <div class="container">
       <%= yield %>
       <%= debug(params) %>
     </div>
   </body>
-  </html>
+</html>
