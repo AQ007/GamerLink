@@ -13,12 +13,12 @@ Rails.application.routes.draw do
 
   get 'fail' => 'welcome#fail'
 
+  post 'tournaments' => 'tournaments#create'
 
 
   # get 'users/:id' => 'users#show'
   get 'users/:id' => 'users#show', as: "user"
   post '/users' => 'users#create'
-  post '/tournaments' => 'tournaments#create'
 
 
   resources :games

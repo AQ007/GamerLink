@@ -6,8 +6,14 @@
     <%= form.label :name %><br>
     <%= form.text_field :name %>
   </p>
+  <p>
+    <%= form.label :game_id %><br>
+    <%= form.text_field :game_id %>
+  </p>
 
   <p>
     <%= form.submit %>
   </p>
 <% end %>
+
+<%=render 'games/games'%>
