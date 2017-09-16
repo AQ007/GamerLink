@@ -1,27 +1,27 @@
 Rails.application.routes.draw do
-  get 'users' => 'users#index'
 
+  # Web App general routes
   root 'welcome#index'
-
-  get '/tournaments' => 'tournaments#index'
-
-  get 'tournaments/new'=> 'tournaments#new'
-
-  get '/tournaments/:id' => 'tournaments#show', as: "tournament"
-
-  get 'users/new' => 'users#new'
-
   get 'fail' => 'welcome#fail'
 
-  post 'tournaments' => 'tournaments#create'
+  #sessions routes
+  get    '/login' => 'sessions#new'
+  post   '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
 
-
-  # get 'users/:id' => 'users#show'
+  # user routes
+  get 'users/new' => 'users#new'
+  get 'users' => 'users#index'
   get 'users/:id' => 'users#show', as: "user"
   post '/users' => 'users#create'
 
+  # tournaments routes
+  get '/tournaments' => 'tournaments#index'
+  get 'tournaments/new'=> 'tournaments#new'
+  get '/tournaments/:id' => 'tournaments#show', as: "tournament"
+  post 'tournaments' => 'tournaments#create'
 
+  # Resources
   resources :games
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
