@@ -11,6 +11,34 @@ a {
 }
 /* @import 'bootstrap-sprockets';
 @import 'bootstrap'; */
+
+/********** NAV BAR *********/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+/****** NAV  BAR END ********/
+
 html, body, section {
 	height: 100%;
 }
@@ -97,14 +125,43 @@ div {
 	background: #fcc567;
 	color: #fff;
 }
-/* ul .navbar {
-  display: flex;
-  flex-direction: row;
-} */
-/* .navbar li {
-  flex-grow: 1;
-} */
-/* .button {
-  display: block;
-  letter-spacing: normal;
-} */
+
+/* BANNER */
+#cf {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+@keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+#cf3 img.top {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 10s;
+animation-direction: alternate;
+}
+/****** experimental nav ***************/
