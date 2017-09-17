@@ -1,9 +1,9 @@
 // Place all the styles related to the tournaments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
+/* body {
   background-size: cover;
-}
+} */
 
 p {
   color: white;
@@ -16,4 +16,32 @@ h1 {
 
 ul {
   align-items: center;
+}
+
+#container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  background-color: #000000;
+/*   background-image: image("https://unsplash.it/200/500?image=1082");
+ */
+  div {
+    flex: 1;
+    text-align: center;
+    transition: .3s;
+    max-width: 20%;
+    padding: 8em 0;
+    background-color: #000000;
+    min-width: 10%;
+
+    &:hover{
+      transition: .5s;
+      max-width: 40% !important;
+      background: #000000;
+      background-image: url("https://unsplash.it/200/500?image=1082");
+      flex-grow: 2;
+      cursor: pointer;
+      color: #fff;
+    }
+  }
 }
