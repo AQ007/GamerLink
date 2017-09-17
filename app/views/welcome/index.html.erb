@@ -1,14 +1,4 @@
-<!-- <h1>GamerLink</h1> -->
 
-<!-- <%= render 'tournaments/tournaments'%>
-<%= render 'users/users'%> -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>GamerLink</title>
-  </head>
-  <body>
     <h1>Welcome to GamerLink</h1>
       <% unless current_user %>
         <div class="form-style-6">
@@ -16,17 +6,10 @@
           <%= render 'users/form'%>
         </div>
         <div class="form-style-6">
-          <h1> SIGN IN</h1>
           <%= render 'sessions/form'%>
         </div>
       <% end %>
-<!--       <div class="Sign_Up">
-  <a class="button" <%= link_to("Sign Up", users_new_path)%> </a>
-  </div> -->
-<!--       <div id="cf">
-  <img class="bottom" src="/images/evo.png" />
-  <img class="top" src="/images/overwatch.png" />
-</div> -->
+
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></center>
     <div class="Games_Tour">
         <section class="container">
@@ -44,21 +27,3 @@
     </section>
     </div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></center>
-
-<!--   <div class="New_Tourn">
-    <h1>HEY MAKE A NEW Tournament!!!</h1>
-
-    <%= form_with model: Tournament.new do |form| %>
-
-      <p>
-        <%= form.label :name %><br>
-        <%= form.text_field :name %>
-      </p>
-
-      <p>
-        <%= form.submit %>
-      </p>
-    <% end %>
-</div> -->
-  </body>
-</html>

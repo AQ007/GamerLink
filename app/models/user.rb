@@ -8,9 +8,9 @@ class User < ApplicationRecord
     length: {minimum:4, maximum:15})
   validates(:email,
     presence: true,
-    length: {minimum:4, maximum:50})
+    length: {minimum:4, maximum:15})
   validates(:password,
     presence: true,
-    length: {minimum:4, maximum:50})
+    length: {minimum:4, maximum:15})
 
 end
