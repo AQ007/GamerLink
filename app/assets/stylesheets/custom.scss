@@ -73,7 +73,7 @@ div {
 }
 
 .left {
-	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 225, 0.10)), url(../images/city.jpg);
+	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 225, 0.10));
 	background-size: cover;
 	background-position: center;
 	flex: 1;
@@ -82,7 +82,7 @@ div {
 }
 
 .right {
-	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10)), url(../images/country.jpg);
+	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10));
 	background-size: cover;
 	background-position: center;
 	flex: 1;

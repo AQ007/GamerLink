@@ -10,33 +10,16 @@
   </head>
   <body>
     <h1>Welcome to GamerLink</h1>
-      <div class="form-style-6">
-        <h1> SIGN UP</h1>
-        <form>
-
-          <%= form_with model: User.new do |form| %>
-
-          <p>
-            <%= form.label :username %><br>
-            <%= form.text_field :username %>
-          </p>
-
-          <p>
-            <%= form.label :email %><br>
-            <%= form.text_field :email %>
-          </p>
-
-          <p>
-            <%= form.label :password %><br>
-            <%= form.text_field :password %>
-          </p>
-
-          <p>
-            <%= form.submit %>
-          </p>
-          <% end %>
-        </form>
-      </div>
+      <% unless current_user %>
+        <div class="form-style-6">
+          <h1> SIGN UP</h1>
+          <%= render 'users/form'%>
+        </div>
+        <div class="form-style-6">
+          <h1> SIGN IN</h1>
+          <%= render 'sessions/form'%>
+        </div>
+      <% end %>
 <!--       <div class="Sign_Up">
   <a class="button" <%= link_to("Sign Up", users_new_path)%> </a>
   </div> -->

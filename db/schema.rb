@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170915225440) do
+ActiveRecord::Schema.define(version: 20170917163301) do
 
   create_table "games", force: :cascade do |t|
     t.string "name"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20170915225440) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
+    #added password digest part of the Bcrypt gem
   end
 
   create_table "users_tournaments", id: false, force: :cascade do |t|
