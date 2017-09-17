@@ -14,9 +14,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to user_path(@user)
     else
-
       redirect_to fail_path
-
     end
   end
 
