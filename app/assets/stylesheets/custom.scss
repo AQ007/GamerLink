@@ -9,10 +9,24 @@ li {
 a {
   text-decoration: none;
 }
+
 /* @import 'bootstrap-sprockets';
 @import 'bootstrap'; */
+body {
+  background-color: black;
+}
 
+p {
+  text-align:  center;
+
+}
+h2 {
+  color: white;
+}
 /********** NAV BAR *********/
+nav {
+  position: relative;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -60,7 +74,7 @@ header {
 }
 
 a {
-  color: teal;
+  color: white;
 }
 .container {
 	display: flex;
@@ -73,7 +87,7 @@ div {
 }
 
 .left {
-	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 225, 0.10)), url(../images/city.jpg);
+	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 225, 0.10)), url(https://unsplash.it/200/300?image=96);
 	background-size: cover;
 	background-position: center;
 	flex: 1;
@@ -82,7 +96,7 @@ div {
 }
 
 .right {
-	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10)), url(../images/country.jpg);
+	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10)), url(https://unsplash.it/200/300?image=1022);
 	background-size: cover;
 	background-position: center;
 	flex: 1;
@@ -96,13 +110,13 @@ div {
 
 .left h1 {
 	font-family: 'arial', cursive;
-	font-size: 6rem;
+	font-size: 4rem;
   text-align: center;
 }
 
 .right h1 {
 	font-family: 'arial', cursive;
-	font-size: 6rem;
+	font-size: 4rem;
 }
 
 .button {
