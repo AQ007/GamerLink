@@ -1,24 +1,63 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  background-color: mediumslateblue;
+
+
+/******* USER CARD **********/
+.userpage {
+  display: flex;
+  justify-content: center;
+}
+.gamer {
+  background-color: #262626;
 }
 
-p {
-  text-align:  center;
+.card {
+  /* Add shadows to create the "card" effect */
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 2px 16px;
 
 }
+
+.card {
+  margin: auto;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+}
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+    border-radius: 5px 5px 0 0;
+}
+/***************USER CARD END********************/
+
 /* <style type="text/css"> */
 .form-style-6{
     font: 95% Arial, Helvetica, sans-serif;
     max-width: 250px;
     margin: 10px left;
     padding: 16px;
-    background: #000077;
+    background: #333333;
 }
 .form-style-6 h1{
-    background: #000000;
+    background: #404040;
     padding: 20px 0;
     font-size: 140%;
     font-weight: 300;
@@ -65,9 +104,9 @@ p {
 .form-style-6 textarea:focus,
 .form-style-6 select:focus
 {
-    box-shadow: 0 0 5px #43D1AF;
+    box-shadow: 0 0 5px ;
     padding: 3%;
-    border: 1px solid #43D1AF;
+    border: 1px solid ;
 }
 
 .form-style-6 input[type="submit"],
@@ -75,17 +114,23 @@ p {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    width: 100%;
-    padding: 3%;
-    background: #43D1AF;
-    border-bottom: 2px solid #30C29E;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;
-    color: #fff;
+    border-radius: 30px;
+  	color: #ffff;
+  	background-color: #fcc567;
+  	padding: 1.5%;
+  	margin: 0 2%;
+  	text-align: center;
+  	text-decoration: none;
+  	font-weight: bold;
+  	display: inline-block;
+  	font-size: 1.5rem;
+  	cursor: pointer;
+  	transition: all 0.3s;
+  	width: 150px;
 }
 .form-style-6 input[type="submit"]:hover,
 .form-style-6 input[type="button"]:hover{
-    background: #2EBC99;
+  background: #00cc00;
+  color: #fff;
 }
 /* </style> */
