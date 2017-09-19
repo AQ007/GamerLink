@@ -9,7 +9,8 @@
 
 25.times do
   game_data = {
-    name: "#{Faker::RockBand.unique.name} Game"
+    name: "#{Faker::RockBand.unique.name} Game",
+    avatar: Faker::Avatar.unique.image
   }
   Game.create!(game_data)
 end
@@ -31,6 +32,7 @@ PASSWORD = 'asdf'
     username: Faker::Internet.unique.user_name,
     email: Faker::Internet.unique.email,
     password: PASSWORD,
+    avatar: Faker::Avatar.unique.image,
   }
   User.create!(user_data)
 end
