@@ -1,182 +1,383 @@
-/* css reset */
-* {
-  box-sizing: border-box;
-}
-
-li {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-}
-
-/* @import 'bootstrap-sprockets';
-@import 'bootstrap'; */
-body {
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+body{
+  zoom:1;
   background-color: lightblue;
 }
-
-p {
-  text-align:  center;
-
-}
-h2 {
-  color: white;
-}
-/********** NAV BAR *********/
-nav {
-  position: relative;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+.nav-list{
+  list-style:none;
+  border: solid;
+  border-radius: 30px;
+  background-color: grey;
 }
 
-li {
-    float: left;
+.nav-list a{
+  text-decoration:none;
+  transition:color 0.3s ease-out;
+  color:inherit;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
-}
-/****** NAV  BAR END ********/
-
-html, body, section {
-	height: 100%;
-}
-
-div {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-body {
-  padding-top: 10px;
-
-/*   text-align: center; */
-}
-
-header {
-  background-color: #000000;
-}
-
-a {
-  color: white;
-}
-.container {
-	display: flex;
-}
-
-div {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.left {
-	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 225, 0.10));
-
-	background-size: cover;
-	background-position: center;
-	flex: 1;
-	padding: 1rem;
-	transition: all .2s ease-in-out;
-}
-
-.right {
-	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10));
-	background-size: cover;
-	background-position: center;
-	flex: 1;
-	padding: 1rem;
-	transition: all .2s ease-in-out;
-}
-
-.left:hover, .right:hover {
-	transform: scale(0.95);
-}
-
-.left h1 {
-	font-family: 'arial', cursive;
-	font-size: 4rem;
-  text-align: center;
-}
-
-.right h1 {
-	font-family: 'arial', cursive;
-	font-size: 4rem;
-}
-
-.button {
-	border-radius: 30px;
-	color: #ffff;
-	background-color: #000000;
-	padding: 1.5%;
-	margin: 0 2%;
-	text-align: center;
-	text-decoration: none;
-	font-weight: bold;
-	display: inline-block;
-	font-size: 1.5rem;
-	cursor: pointer;
-	transition: all 0.3s;
-	width: 150px;
-}
-
-.button:hover {
-	background: #fcc567;
-	color: #fff;
-}
-
-/* BANNER */
-#cf {
+.nav-list li{
   position:relative;
-  height:281px;
-  width:450px;
+  display:inline-block;
+  margin:5px;
+  letter-spacing:-1px;
+}
+
+
+.GamerLink:after,
+.GamerLink:before,
+.GamerLink a:after,
+.GamerLink a:before{
+  background-color:#CEDD3E;
+}
+
+.GamerLink:hover{
+  color:#CEDD3E
+}
+
+.Games:after,
+.Games:before,
+.Games a:after,
+.Games a:before{
+  background-color:#F27132;
+}
+
+.Games:hover{
+  color:#F27132;
+}
+
+.Tournaments:after,
+.Tournaments:before,
+.Tournaments a:after,
+.Tournaments a:before{
+  background-color:#85C3E9;
+}
+
+.Tournaments:hover{
+  color:#85C3E9;
+}
+
+.NewTournament:after,
+.NewTournament:before,
+.NewTournament a:after,
+.NewTournament a:before{
+  background-color:#FDBE2A;
+}
+
+.NewTournament:hover{
+  color:#FDBE2A;
+}
+.Players:after,
+.Players:before,
+.Players a:after,
+.Players a:before{
+  background-color:#FDBE2A;
+}
+
+.Players:hover{
+  color:#FDBE2A;
+}
+
+
+.nav-list li:after,
+.nav-list li:before,
+.nav-list  a:before,
+.nav-list  a:after{
+  position:absolute;
+  content:'';
+  border-radius:4px;
+}
+
+.nav-list li:after,
+.nav-list li:before{
+  bottom:-4px;
+  height:4px;
+}
+
+.nav-list li:not(.selected):before{
+  left:0;
+  right:-2px;
+}
+
+.nav-list li.selected:after{
+  left:0;
+  right:39px;
+}
+
+.nav-list li.selected:before{
+  right:-2px;
+  width:13px;
+}
+
+
+.nav-list .selected a:before{
+  height:22px;
+  width:4px;
+  bottom:-22px;
+  right:7px;
+}
+
+.nav-list .selected a:after{
+  height:4px;
+  width:40px;
+  bottom:-13px;
+  right:5px;
+  transform:rotate(30deg);
+}
+
+/* Booring stuff*/
+
+body{
+  font-family: 'Varela Round', sans-serif;
+}
+
+.wrapper{
+  width:500px;
   margin:0 auto;
 }
 
-#cf img {
-  position:absolute;
-  left:0;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-}
-@keyframes cf3FadeInOut {
-0% {
-opacity:1;
-}
-45% {
-opacity:1;
-}
-55% {
-opacity:0;
-}
-100% {
-opacity:0;
-}
+h1{
+  text-align:center;
+  padding-bottom:.5em;
 }
 
-#cf3 img.top {
-animation-name: cf3FadeInOut;
-animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
-animation-duration: 10s;
-animation-direction: alternate;
+footer{
+  margin-top:5em;
+  float:right;
+  font-size:.7em;
 }
-/****** experimental nav ***************/
+
+
+footer a{
+  color:#79B1D4;
+  text-decoration:none;
+}
+
+footer a:hover{
+  border-bottom:1px solid black;
+}
+
+.red{
+  color:#F27132;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//
+//
+//
+// /* css reset */
+// * {
+//   box-sizing: border-box;
+// }
+//
+// li {
+//   list-style-type: none;
+// }
+// a {
+//   text-decoration: none;
+// }
+//
+// /* @import 'bootstrap-sprockets';
+// @import 'bootstrap'; */
+// body {
+//   background-color: lightblue;
+// }
+//
+// p {
+//   text-align:  center;
+//
+// }
+// h2 {
+//   color: white;
+// }
+// /********** NAV BAR *********/
+// nav {
+//   position: relative;
+// }
+// ul {
+//   list-style-type: none;
+//   margin: 0;
+//   padding: 0;
+//   overflow: hidden;
+//   // background-color: ;
+// }
+//
+// li {
+//     float: left;
+// }
+//
+// li a {
+//     display: block;
+//     color: white;
+//     text-align: center;
+//     padding: 14px 16px;
+//     text-decoration: none;
+// }
+//
+// /* Change the link color to #111 (black) on hover */
+// li a:hover {
+//     background-color: #111;
+// }
+// /****** NAV  BAR END ********/
+//
+// html, body, section {
+// 	height: 100%;
+// }
+//
+// div {
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// }
+//
+// body {
+//   padding-top: 10px;
+//
+// /*   text-align: center; */
+// }
+//
+// header {
+//   background-color: #000000;
+// }
+//
+// a {
+//   color: white;
+// }
+// .container {
+// 	display: flex;
+// }
+//
+// div {
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// }
+//
+// .left {
+// 	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 225, 0.10));
+//
+// 	background-size: cover;
+// 	background-position: center;
+// 	flex: 1;
+// 	padding: 1rem;
+// 	transition: all .2s ease-in-out;
+// }
+//
+// .right {
+// 	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10));
+// 	background-size: cover;
+// 	background-position: center;
+// 	flex: 1;
+// 	padding: 1rem;
+// 	transition: all .2s ease-in-out;
+// }
+//
+// .left:hover, .right:hover {
+// 	transform: scale(0.95);
+// }
+//
+// .left h1 {
+// 	font-family: 'arial', cursive;
+// 	font-size: 4rem;
+//   text-align: center;
+// }
+//
+// .right h1 {
+// 	font-family: 'arial', cursive;
+// 	font-size: 4rem;
+// }
+//
+// .button {
+// 	border-radius: 30px;
+// 	color: #ffff;
+// 	background-color: #000000;
+// 	padding: 1.5%;
+// 	margin: 0 2%;
+// 	text-align: center;
+// 	text-decoration: none;
+// 	font-weight: bold;
+// 	display: inline-block;
+// 	font-size: 1.5rem;
+// 	cursor: pointer;
+// 	transition: all 0.3s;
+// 	width: 150px;
+// }
+//
+// .button:hover {
+// 	background: #fcc567;
+// 	color: #fff;
+// }
+//
+// /* BANNER */
+// #cf {
+//   position:relative;
+//   height:281px;
+//   width:450px;
+//   margin:0 auto;
+// }
+//
+// #cf img {
+//   position:absolute;
+//   left:0;
+//   -webkit-transition: opacity 1s ease-in-out;
+//   -moz-transition: opacity 1s ease-in-out;
+//   -o-transition: opacity 1s ease-in-out;
+//   transition: opacity 1s ease-in-out;
+// }
+// @keyframes cf3FadeInOut {
+// 0% {
+// opacity:1;
+// }
+// 45% {
+// opacity:1;
+// }
+// 55% {
+// opacity:0;
+// }
+// 100% {
+// opacity:0;
+// }
+// }
+//
+// #cf3 img.top {
+// animation-name: cf3FadeInOut;
+// animation-timing-function: ease-in-out;
+// animation-iteration-count: infinite;
+// animation-duration: 10s;
+// animation-direction: alternate;
+// }
+// /****** experimental nav ***************/

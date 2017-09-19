@@ -12,13 +12,12 @@
     <% if current_user %>  <%#...added if statement to add current user method for log in%>
       <header class= "nav navbar-nav-fixed-top navbar-inverse">
               <nav>
-                <ul class= "navbar">
-                  <li><%= link_to("GamerLink", root_path) %></li>
-                  <li><%= link_to("Games", games_path) %></li>
-                  <li><%= link_to("Tournaments", tournaments_path) %></li>
-                  <li><%= link_to("Players", users_path) %></li>
-                  <li><%= link_to("New Player", users_new_path) %></li>
-                  <li><%= link_to("New Tournament", tournaments_new_path) %></li>
+                <ul class= "nav-list">
+                  <li><%= link_to("GamerLink", root_path, class: 'GamerLink') %></li>
+                  <li><%= link_to("Games", games_path, class: 'Games') %></li>
+                  <li><%= link_to("Tournaments", tournaments_path, class: 'Tournaments') %></li>
+                  <li><%= link_to("Players", users_path, class: 'Players') %></li>
+                  <li><%= link_to("New Tournament", tournaments_new_path, class: 'NewTournament') %></li>
                   <% if current_user %>
                     <li><%= link_to("Log Out", logout_path, method: "delete" )%></li>
                   <% end %>
