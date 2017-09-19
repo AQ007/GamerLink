@@ -1,27 +1,13 @@
+    <h1>Below a List of all Active Tournaments</h1>
 
+    <h2>
+      <%= link_to("Create a New Tournament!", tournaments_new_path) %>
+    </h2>
 
-  <ul>
-    <% @tournaments.each do |tourny| %>
-    <li> <%= link_to(tourny.name, tournament_path(tourny)) %>
-    </li>
-    <% end %>
-  </ul>
-  <div class="new_tourny">
-    <h1>MAKE A NEW Tournament!!</h1>
-    <div class="New_Tourn">
-      <%= form_with model: Tournament.new do |form| %>
-      <p>
-        <%= form.label :name %><br>
-        <%= form.text_field :name %>
-      </p>
-
-      <p>
-        <%= form.submit %>
-      </p>
+    <ul>
+      <% @tournaments.each do |tourny| %>
+        <li>
+          <%= link_to(tourny.name, tournament_path(tourny)) %>
+        </li>
       <% end %>
-    </div>
-  </div>
-</body>
-
-
-</ul>
+    </ul>
