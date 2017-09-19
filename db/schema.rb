@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20170917163301) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
-    #added password digest part of the Bcrypt gem
   end
 
   create_table "users_tournaments", id: false, force: :cascade do |t|
