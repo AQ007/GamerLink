@@ -20,7 +20,7 @@
             <%= link_to(tourny.name, tournament_path(tourny))%>
           </td>
           <td class="text-left">
-            <%= link_to(tourny.game_id, tournament_path(tourny))%>
+            <%= link_to(tourny.game.name, game_path(tourny))%>
           </td>
 
         </tr>
