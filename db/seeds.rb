@@ -19,35 +19,35 @@ User.create(username:"Henry Arbolaez", email:"henryarbolaez@gmail.com", password
 g1 = Game.new(name:"WoW")
 
 
-Tournament.create(name:"DoubleDees", game_id:g1.id)
-Tournament.create(name:"LargeChestnuts", game_id:g1.id)
-Tournament.create(name:"WildGuns", game_id:g1.id)
-Tournament.create(name:"SwingingMelons", game_id:g1.id)
+# Tournament.create(name:"DoubleDees", game_id:g1.id)
+# Tournament.create(name:"LargeChestnuts", game_id:g1.id)
+# Tournament.create(name:"WildGuns", game_id:g1.id)
+# Tournament.create(name:"SwingingMelons", game_id:g1.id)
 
-t1 = Tournament.find_by(name:"DoubleDees")
-t2 = Tournament.find_by(name:"LargeChestnuts")
-t3 = Tournament.find_by(name:"WildGuns")
-t4 = Tournament.find_by(name:"SwingingMelons")
-
-t1.users << User.find_by(username:"Samuel Tully")
-t1.users << User.find_by(username:"Henry Arbolaez")
-t1.users << User.find_by(username:"Daniel Ricciardo")
-t1.users << User.find_by(username:"Valtteri Bottas")
-
-t2.users << User.find_by(username:"Samuel Tully")
-t2.users << User.find_by(username:"John Wayne")
-t2.users << User.find_by(username:"PK Banks")
-t2.users << User.find_by(username:"Lewis Hamilton")
-
-t3.users << User.find_by(username:"Samuel Tully")
-t3.users << User.find_by(username:"Sebastian Vettel")
-t3.users << User.find_by(username:"PK Banks")
-t3.users << User.find_by(username:"Lewis Hamilton")
-
-t4.users << User.find_by(username:"Samuel Tully")
-t4.users << User.find_by(username:"John Wayne")
-t4.users << User.find_by(username:"Sebastian Vettel")
-t4.users << User.find_by(username:"PK Banks")
+# # t1 = Tournament.find_by(name:"DoubleDees")
+# # t2 = Tournament.find_by(name:"LargeChestnuts")
+# # t3 = Tournament.find_by(name:"WildGuns")
+# # t4 = Tournament.find_by(name:"SwingingMelons")
+#
+# t1.users << User.find_by(username:"Samuel Tully")
+# t1.users << User.find_by(username:"Henry Arbolaez")
+# t1.users << User.find_by(username:"Daniel Ricciardo")
+# t1.users << User.find_by(username:"Valtteri Bottas")
+#
+# t2.users << User.find_by(username:"Samuel Tully")
+# t2.users << User.find_by(username:"John Wayne")
+# t2.users << User.find_by(username:"PK Banks")
+# t2.users << User.find_by(username:"Lewis Hamilton")
+#
+# t3.users << User.find_by(username:"Samuel Tully")
+# t3.users << User.find_by(username:"Sebastian Vettel")
+# t3.users << User.find_by(username:"PK Banks")
+# t3.users << User.find_by(username:"Lewis Hamilton")
+#
+# t4.users << User.find_by(username:"Samuel Tully")
+# t4.users << User.find_by(username:"John Wayne")
+# t4.users << User.find_by(username:"Sebastian Vettel")
+# t4.users << User.find_by(username:"PK Banks")
 
 
 
