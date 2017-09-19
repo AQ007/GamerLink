@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
   <head>
     <title>GamerLink</title>
     <%= csrf_meta_tags %>
@@ -10,28 +9,26 @@
 
 
   <body>
-    <% if current_user %>  <%#...added if statement to add current user method for log in%>
+    <% #if current_user %>  <%#...added if statement to add current user method for log in%>
       <header class= "nav navbar-nav-fixed-top navbar-inverse">
-        <%= link_to "GML HOME logo", "#" %>
-              <nav>
-                <ul class= "navbar">
-                  <button><li><%= link_to("GamerLink", root_path) %></li></button>
-                  <button><li><%= link_to("Games", games_path) %></li></button>
-                  <button><li><%= link_to("Tournaments", tournaments_path) %></li></button>
-                  <button><li><%= link_to("Players", users_path) %></li></button>
-                  <button><li><%= link_to("New Player", users_new_path) %></li></button>
-                  <button><li><%= link_to("New Tournament", tournaments_new_path) %></li></button>
+              <nav class="wrapper">
+                <ul class= "nav-list">
+                  <li><%= link_to("GamerLink", root_path, class: 'GamerLink') %></li>
+                  <li><%= link_to("Games", games_path, class: 'Games') %></li>
+                  <li><%= link_to("Tournaments", tournaments_path, class: 'Tournaments') %></li>
+                  <li><%= link_to("Players", users_path, class: 'Players') %></li>
+                  <li><%= link_to("New Tournament", tournaments_new_path, class: 'NewTournament') %></li>
                   <% if current_user %>
-                    <button><li><%= link_to("Log Out", logout_path, method: "delete" )%></li></button>
+                  <li><%= link_to("Log Out", logout_path, method: "delete" )%></li>
+                    <% else %>
+                  <li><%= link_to("Sign Up", users_new_path )%></li>
                   <% end %>
                 </ul>
               </nav>
 
       </header>
-    <%end%>
     <div class="container">
       <%= yield %>
-      <%= debug(params) %>
-    </div> -->
+    </div>
   </body>
   </html>

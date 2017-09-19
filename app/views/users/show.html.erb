@@ -1,10 +1,27 @@
-<h1><%= @user.username %></h1>
-<h1><%= @user.email %></h1>
+<div class="table-title">
+  <h3>
+    Below a List of Tournaments that
+    <%= @user.username %>
+    Belongs to!
+  </h3>
+</div>
 
-<h1>Is a part of these Tournaments</h1>
 
-<ul>
-<% @user.tournaments.each do |tourny| %>
-<li><%=tourny.name %></li>
-<% end %>
-</ul>
+<table class="table-fill">
+  <thead>
+    <tr>
+      <th class="text-left">Tournament Name</th>
+     </tr>
+  </thead>
+
+  <tbody class="table-hover">
+    <% @user.tournaments.each do |tourny| %>
+      <tr>
+        <td class="text-left">
+          <%=tourny.name %>
+        </td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
