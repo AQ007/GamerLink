@@ -17,7 +17,7 @@
     <% @game.tournaments.each do |g| %>
       <tr>
         <td class="text-left">
-          <%=g.name%>
+          <%=link_to g.name, tournament_path(g) %>
         </td>
         <td class="text-left">
           <%=g.users.count%>
