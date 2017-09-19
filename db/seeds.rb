@@ -5,18 +5,46 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+PASSWORD = 'asdf'
+100.times do
+  user_data = {
+    username: Faker::Internet.unique.user_name,
+    email: Faker::Internet.unique.email,
+    password: PASSWORD,
+  }
+  User.create(data)
+end
 
-User.create(username:"Samuel Tully", email:"Samuel@gmail.com", password:"admin")
-User.create(username:"John Wayne", email:"johnwayne@gmail.com", password:"12345")
-User.create(username:"PK Banks", email:"pkbanks@gmail.com", password:"1241245245")
-User.create(username:"Lewis Hamilton", email:"lewishamilton@gmail.com", password:"supernecryption")
-User.create(username:"Sebastian Vettel", email:"sebastianvettel@gmail.com", password:"massiveanal")
-User.create(username:"Valtteri Bottas", email:"valtteri@gmail.com", password:"thebigD")
-User.create(username:"Daniel Ricciardo", email:"danielricciardo@gmail.com", password:"thesmallD")
-User.create(username:"Henry Arbolaez", email:"henryarbolaez@gmail.com", password:"thedoubleDD")
+25.times do
+  game_data ={
+    name: Faker::RockBand.unique.name
+  }
+  p Game.create(data)
+end
+
+i = 0
+25.times do
+  tournament_data ={
+    name: Faker::University.unique.name,
+    game_id: i+=1
+  }
+  Tournament.create(data)
+end
 
 
-g1 = Game.new(name:"WoW")
+
+
+# User.create(username:"Samuel Tully", email:"Samuel@gmail.com", password:"admin")
+# User.create(username:"John Wayne", email:"johnwayne@gmail.com", password:"12345")
+# User.create(username:"PK Banks", email:"pkbanks@gmail.com", password:"1241245245")
+# User.create(username:"Lewis Hamilton", email:"lewishamilton@gmail.com", password:"supernecryption")
+# User.create(username:"Sebastian Vettel", email:"sebastianvettel@gmail.com", password:"massiveanal")
+# User.create(username:"Valtteri Bottas", email:"valtteri@gmail.com", password:"thebigD")
+# User.create(username:"Daniel Ricciardo", email:"danielricciardo@gmail.com", password:"thesmallD")
+# User.create(username:"Henry Arbolaez", email:"henryarbolaez@gmail.com", password:"thedoubleDD")
+#
+#
+# g1 = Game.new(name:"WoW")
 
 
 # Tournament.create(name:"DoubleDees", game_id:g1.id)
@@ -48,10 +76,3 @@ g1 = Game.new(name:"WoW")
 # t4.users << User.find_by(username:"John Wayne")
 # t4.users << User.find_by(username:"Sebastian Vettel")
 # t4.users << User.find_by(username:"PK Banks")
-
-
-
-# g2 = Game.new(name:"Call of Duty")
-# g3 = Game.new(name:"Fifa")
-# g4 = Game.new(name:"Madden")
-# g5 = Game.new(name:"Halo")

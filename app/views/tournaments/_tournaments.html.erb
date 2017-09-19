@@ -1,13 +1,30 @@
-    <h1>Below a List of all Active Tournaments</h1>
+  <div class="table-title">
+    <h3>
+      Below a List of all Active Tournaments
+    </h3>
+  </div>
 
-    <h2>
-      <%= link_to("Create a New Tournament!", tournaments_new_path) %>
-    </h2>
 
-    <ul>
+  <table class="table-fill">
+    <thead>
+      <tr>
+        <th class="text-left">Tournament Name</th>
+        <th class="text-left">Game</th>
+      </tr>
+    </thead>
+
+    <tbody class="table-hover">
       <% @tournaments.each do |tourny| %>
-        <li>
-          <%= link_to(tourny.name, tournament_path(tourny)) %>
-        </li>
+        <tr>
+          <td class="text-left">
+            <%= link_to(tourny.name, tournament_path(tourny))%>
+          </td>
+          <td class="text-left">
+            <%= link_to(tourny.game_id, tournament_path(tourny))%>
+          </td>
+
+        </tr>
       <% end %>
-    </ul>
+
+    </tbody>
+  </table>
