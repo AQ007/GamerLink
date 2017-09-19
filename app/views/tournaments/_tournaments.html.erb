@@ -17,10 +17,10 @@
       <% @tournaments.each do |tourny| %>
         <tr>
           <td class="text-left">
-            <%= link_to(tourny.name, tournament_path(tourny))%>
+            <%= link_to(tourny.name, tourny)%>
           </td>
           <td class="text-left">
-            <%= link_to(tourny.game.name, game_path(tourny))%>
+            <%= link_to(tourny.game.name, tourny.game)%>
           </td>
 
         </tr>
