@@ -1,0 +1,13 @@
+<h1>HEY MAKE A NEW Game!!!</h1>
+
+<%= form_with model: Game.new do |form| %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

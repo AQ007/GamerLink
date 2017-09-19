@@ -1,8 +1,47 @@
-<h1>Mad Tournaments!!!</h1>
-<ul>
 
- <% @tournaments.each do |tourny| %>
-  <li> <%= link_to(tourny.name, tournament_path(tourny)) %>
-  </li>
- <% end %>
+
+<body background="https://i.pinimg.com/originals/f6/60/44/f660441f818420d0ca02888dae382801.jpg">
+  <h1>Mad Tournaments!!!</h1>
+  <div id="container">
+    <div class="DoubleDees">
+      <a href="http://localhost:3000/tournaments/1">DoubleDees</a>
+    </div>
+    <div class="LargeChestnuts">
+      <a href="http://localhost:3000/tournaments/2">LargeChestnuts</a>
+    </div>
+    <div class="WildGuns">
+      <a href="http://localhost:3000/tournaments/3">WildGuns</a>
+    </div>
+    <div class="SwingingMelons">
+      <a href="http://localhost:3000/tournaments/4">SwingingMelons</a>
+    </div>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <ul>
+    <% @tournaments.each do |tourny| %>
+    <li> <%= link_to(tourny.name, tournament_path(tourny)) %>
+    </li>
+    <% end %>
+  </ul>
+  <div class="new_tourny">
+    <h1>MAKE A NEW Tournament!!</h1>
+
+    <div class="New_Tourn">
+
+      <%= form_with model: Tournament.new do |form| %>
+
+      <p>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+      </p>
+
+      <p>
+        <%= form.submit %>
+      </p>
+      <% end %>
+    </div>
+  </div>
+</body>
+
+
 </ul>

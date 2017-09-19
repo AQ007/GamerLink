@@ -1,0 +1,19 @@
+<h1>HEY MAKE A NEW Tournament!!!</h1>
+
+<%= form_with model: Tournament.new, local: true do |form| %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :game_id %><br>
+    <%= form.text_field :game_id %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%=render 'games/games'%>

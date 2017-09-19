@@ -15,10 +15,14 @@ User.create(username:"Valtteri Bottas", email:"valtteri@gmail.com", password:"th
 User.create(username:"Daniel Ricciardo", email:"danielricciardo@gmail.com", password:"thesmallD")
 User.create(username:"Henry Arbolaez", email:"henryarbolaez@gmail.com", password:"thedoubleDD")
 
-Tournament.create(name:"DoubleDees")
-Tournament.create(name:"LargeChestnuts")
-Tournament.create(name:"WildGuns")
-Tournament.create(name:"SwingingMelons")
+
+g1 = Game.new(name:"WoW")
+
+
+Tournament.create(name:"DoubleDees", game_id:g1.id)
+Tournament.create(name:"LargeChestnuts", game_id:g1.id)
+Tournament.create(name:"WildGuns", game_id:g1.id)
+Tournament.create(name:"SwingingMelons", game_id:g1.id)
 
 t1 = Tournament.find_by(name:"DoubleDees")
 t2 = Tournament.find_by(name:"LargeChestnuts")
@@ -44,3 +48,10 @@ t4.users << User.find_by(username:"Samuel Tully")
 t4.users << User.find_by(username:"John Wayne")
 t4.users << User.find_by(username:"Sebastian Vettel")
 t4.users << User.find_by(username:"PK Banks")
+
+
+
+# g2 = Game.new(name:"Call of Duty")
+# g3 = Game.new(name:"Fifa")
+# g4 = Game.new(name:"Madden")
+# g5 = Game.new(name:"Halo")
