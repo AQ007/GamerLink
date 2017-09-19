@@ -6,29 +6,29 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 PASSWORD = 'asdf'
-100.times do
+50.times do
   user_data = {
     username: Faker::Internet.unique.user_name,
     email: Faker::Internet.unique.email,
-    password: PASSWORD,
+    password: PASSWORD
   }
-  User.create(data)
+  p User.create(user_data)
 end
 
 25.times do
   game_data ={
     name: Faker::RockBand.unique.name
   }
-  p Game.create(data)
+  Game.create(game_data)
 end
 
 i = 0
 25.times do
   tournament_data ={
     name: Faker::University.unique.name,
-    game_id: i+=1
+    game_id: i += 1
   }
-  Tournament.create(data)
+  Tournament.create(tournament_data)
 end
 
 

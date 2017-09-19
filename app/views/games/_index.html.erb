@@ -8,6 +8,7 @@
 <table class="table-fill">
   <thead>
     <tr>
+      <th class="text-left">Game Picture</th>
       <th class="text-left">Game Name</th>
       <th class="text-left"># of Tournaments Available</th>
     </tr>
@@ -16,6 +17,9 @@
   <tbody class="table-hover">
     <% @games.each do |game| %>
       <tr>
+        <td class="text-left">
+          <%= link_to(game.name, game_path(game)) %>
+        </td>
         <td class="text-left">
           <%= link_to(game.name, game_path(game)) %>
         </td>
