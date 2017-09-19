@@ -11,7 +11,7 @@
   <body>
     <% if current_user %>  <%#...added if statement to add current user method for log in%>
       <header class= "nav navbar-nav-fixed-top navbar-inverse">
-              <nav>
+              <nav class="wrapper">
                 <ul class= "nav-list">
                   <li><%= link_to("GamerLink", root_path, class: 'GamerLink') %></li>
                   <li><%= link_to("Games", games_path, class: 'Games') %></li>

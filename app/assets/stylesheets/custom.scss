@@ -110,14 +110,14 @@ body{
 }
 
 
-.nav-list .selected a:before{
+.nav-list .selected li:before{
   height:22px;
   width:4px;
   bottom:-22px;
   right:7px;
 }
 
-.nav-list .selected a:after{
+.nav-list .selected li:after{
   height:4px;
   width:40px;
   bottom:-13px;
