@@ -1,5 +1,5 @@
 
-<div class="form-style-6">
+<div class="form-style-6" style="width:60%;margin:0 auto; max-width: 100%;">
 <%= form_with model: Tournament.new, local: true do |form| %>
   <p>
     <%= form.label :name %><br>
@@ -10,7 +10,7 @@
     <%= form.text_field :game_id %>
   </p>
   <p>
-    <%= form.submit %>
+    <%= form.submit  "Create Tournament", style: "width: 280px;"%>
   </p>
 <% end %>
 </div>
