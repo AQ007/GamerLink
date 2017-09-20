@@ -5,31 +5,47 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+25.times do
+  game_data = {
+    name: "#{Faker::RockBand.unique.name} Game",
+    avatar: Faker::Avatar.unique.image
+  }
+  Game.create!(game_data)
+end
+puts "#{Game.count} games created"
+
+
+25.times do
+  tournament_data = {
+    name: "#{Faker::University.unique.name} Tournament",
+    game: Game.order("RANDOM()").first
+  }
+  Tournament.create!(tournament_data)
+end
+puts "#{Tournament.count} tournaments created"
+
 PASSWORD = 'asdf'
 50.times do
   user_data = {
     username: Faker::Internet.unique.user_name,
     email: Faker::Internet.unique.email,
-    password: PASSWORD
+    password: PASSWORD,
+    avatar: Faker::Avatar.unique.image,
   }
-  p User.create(user_data)
+  User.create!(user_data)
+end
+puts "#{User.count} users created"
+
+50.times do
+  Tournament.order("RANDOM()").first.users << User.order("RANDOM()").first
 end
 
-25.times do
-  game_data ={
-    name: Faker::RockBand.unique.name
-  }
-  Game.create(game_data)
-end
 
-i = 0
-25.times do
-  tournament_data ={
-    name: Faker::University.unique.name,
-    game_id: i += 1
-  }
-  Tournament.create(tournament_data)
-end
+
+
+
 
 
 

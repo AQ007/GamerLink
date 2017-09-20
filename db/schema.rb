@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170917163301) do
+ActiveRecord::Schema.define(version: 20170919221545) do
 
   create_table "games", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
   end
 
   create_table "tournaments", force: :cascade do |t|
@@ -36,6 +37,10 @@ ActiveRecord::Schema.define(version: 20170917163301) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+<<<<<<< HEAD
+=======
+    t.string "avatar"
+>>>>>>> 0e51507d12da771aae3f9aa4e8a6bd031ce01860
   end
 
   create_table "users_tournaments", id: false, force: :cascade do |t|

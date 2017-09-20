@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 body{
-  zoom:1;
   background-color: lightblue;
 }
 .nav-list{
@@ -8,6 +7,7 @@ body{
   border: solid;
   border-radius: 30px;
   background-color: grey;
+  height: 10vh;
 }
 
 .nav-list a{
@@ -132,8 +132,6 @@ body{
 }
 
 .wrapper{
-  width:500px;
-  margin:0 auto;
 }
 
 h1{

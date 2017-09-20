@@ -5,11 +5,12 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Latest compiled and minified CSS -->
   </head>
 
 
   <body>
-    <% #if current_user %>  <%#...added if statement to add current user method for log in%>
+    <% if current_user %>  <%#...added if statement to add current user method for log in%>
       <header class= "nav navbar-nav-fixed-top navbar-inverse">
               <nav class="wrapper">
                 <ul class= "nav-list">
@@ -25,8 +26,8 @@
                   <% end %>
                 </ul>
               </nav>
-
-      </header>
+            </header>
+      <% end %>
     <div class="container">
       <%= yield %>
     </div>

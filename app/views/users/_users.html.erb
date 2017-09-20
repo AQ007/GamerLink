@@ -8,6 +8,7 @@
   <table class="table-fill">
     <thead>
       <tr>
+        <th class="text-left"> Avatar</th>
         <th class="text-left">User Name</th>
       </tr>
     </thead>
@@ -15,6 +16,10 @@
     <tbody class="table-hover">
       <% @users.each do |user| %>
         <tr>
+          <td class="text-left">
+            <%= image_tag "#{user.avatar}" %>
+          </td>
+
           <td class="text-left">
             <%= link_to(user.username, user_path(user)) %>
           </td>

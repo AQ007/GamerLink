@@ -1,14 +1,11 @@
 <div class="table-title">
-  <h3>
-    Below a List of all Active Games
-  </h3>
 </div>
 
 
 <table class="table-fill">
   <thead>
     <tr>
-      <th class="text-left">Game Picture</th>
+      <th class="text-left">Game Avatar</th>
       <th class="text-left">Game Name</th>
       <th class="text-left"># of Tournaments Available</th>
     </tr>
@@ -18,7 +15,7 @@
     <% @games.each do |game| %>
       <tr>
         <td class="text-left">
-          <%= link_to(game.name, game_path(game)) %>
+          <%= image_tag "#{game.avatar}" %>
         </td>
         <td class="text-left">
           <%= link_to(game.name, game_path(game)) %>
