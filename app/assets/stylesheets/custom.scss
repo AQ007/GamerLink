@@ -1,22 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 body{
+  background-image: url("background.jpg");
   background-color: lightblue;
 }
+
+
+
 .nav-list{
   list-style:none;
+  text-align: center;
   border: solid;
   border-radius: 30px;
-  background-color: grey;
+  background-color: #1b1e24;
   height: 10vh;
 }
 
 .nav-list a{
   text-decoration:none;
   transition:color 0.3s ease-out;
-  color:inherit;
+  color: white;
 }
 
 .nav-list li{
+  text-align: center;
   position:relative;
   display:inline-block;
   margin:5px;
