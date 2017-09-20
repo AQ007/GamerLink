@@ -35,14 +35,6 @@
 
 }
 
-.card {
-  margin: auto;
-}
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px; /* 5px rounded corners */
-}
 /* Add rounded corners to the top left and the top right corner of the image */
 img {
     border-radius: 5px 5px 0 0;
@@ -115,26 +107,34 @@ img {
 
 .form-style-6 input[type="submit"],
 .form-style-6 input[type="button"]{
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    border-radius: 30px;
-  	color: #ffff;
-  	background-color: #fcc567;
-  	padding: 1.5%;
-  	margin: 0 2%;
-  	text-align: center;
-  	text-decoration: none;
-  	font-weight: bold;
-  	display: inline-block;
-  	font-size: 1.5rem;
-  	cursor: pointer;
-  	transition: all 0.3s;
-  	width: 150px;
+  position: relative;
+	display: block;
+/*   background: #00cc00; */
+background: none center center no-repeat;
+color: white;
+	background-size: cover;
+	border: 2px solid #fff;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	padding: 20px 15px;
+	text-align: center;
+	max-width: 270px;
+	min-width: 200px;
+	cursor: pointer;
+	overflow: hidden;
+	-webkit-transition: border 1s cubic-bezier(0.19,1,.22,1),color .6s cubic-bezier(0.19,1,.22,1);
+	transition: border 1s cubic-bezier(0.19,1,.22,1), color .6s cubic-bezier(0.19,1,.22,1), background 5s cubic-bezier(0.19,1,.22,1);
 }
+
 .form-style-6 input[type="submit"]:hover,
 .form-style-6 input[type="button"]:hover{
   background: #00cc00;
   color: #fff;
-}
+    border-color: #fff;
+    box-shadow: 0 0 5px rgba(255,245,245,0.8);
+    background-image: url('http://cuinine.com/img/codepen/savvy.jpg');
+    background-blend-mode: darken;
+  }
+
+
 /* </style> */
