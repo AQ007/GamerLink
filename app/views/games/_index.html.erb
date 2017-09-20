@@ -1,4 +1,7 @@
 <div class="table-title">
+  <h3>
+    Games
+  </h3>
 </div>
 
 
@@ -15,7 +18,7 @@
     <% @games.each do |game| %>
       <tr>
         <td class="text-left">
-          <%= image_tag "#{game.avatar}" %>
+          <%= link_to((image_tag "#{game.avatar}"), game_path(game)) %>
         </td>
         <td class="text-left">
           <%= link_to(game.name, game_path(game)) %>

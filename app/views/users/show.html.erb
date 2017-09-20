@@ -1,8 +1,6 @@
 <div class="table-title">
   <h3>
-    Below a List of Tournaments that
     <%= @user.username %>
-    Belongs to!
   </h3>
 </div>
 
@@ -18,7 +16,7 @@
     <% @user.tournaments.each do |tourny| %>
       <tr>
         <td class="text-left">
-          <%=tourny.name %>
+          <%=link_to tourny.name, tourny %>
         </td>
       </tr>
     <% end %>

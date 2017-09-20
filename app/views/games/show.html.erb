@@ -1,6 +1,6 @@
 <div class="table-title">
   <h3>
-    Below a List of Tournaments that belong to..
+    The
     <%= @game.name %>
   </h3>
 </div>
@@ -20,7 +20,7 @@
           <%=link_to g.name, tournament_path(g) %>
         </td>
         <td class="text-left">
-          <%=g.users.count%>
+          <%=link_to(g.users.count, tournament_path(g) )%>
         </td>
 
       </tr>

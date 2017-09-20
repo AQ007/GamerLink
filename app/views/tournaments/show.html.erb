@@ -2,7 +2,6 @@
 <div class="table-title">
   <h3>
     <%= @tournament.name %>
-    Players Listed Below
   </h3>
 </div>
 
@@ -10,6 +9,7 @@
 <table class="table-fill">
   <thead>
     <tr>
+      <th class="text-left">Avatar</th>
       <th class="text-left">Player</th>
     </tr>
   </thead>
@@ -17,6 +17,9 @@
   <tbody class="table-hover">
     <% @tournament.users.each do |u| %>
       <tr>
+        <td class="text-left">
+          <%= link_to((image_tag "#{u.avatar}"), u) %>
+        </td>
         <td class="text-left">
           <%= link_to(u.username, u) %>
         </td>
