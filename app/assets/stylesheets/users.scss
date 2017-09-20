@@ -27,10 +27,11 @@
 /* Add some padding inside the card container */
 .container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   align-content: center;
   padding: 2px 16px;
+  margin-top: 110px;
 
 }
 
@@ -45,6 +46,7 @@
 /* Add rounded corners to the top left and the top right corner of the image */
 img {
     border-radius: 5px 5px 0 0;
+    max-height: 100px;
 }
 /***************USER CARD END********************/
 
@@ -55,6 +57,8 @@ img {
     margin: 10px left;
     padding: 16px;
     background: #333333;
+        color: white;
+
 }
 .form-style-6 h1{
     background: #404040;
@@ -89,7 +93,7 @@ img {
     background: #fff;
     margin-bottom: 4%;
     border: 1px solid #ccc;
-    padding: 3%;
+    padding: 6px;
     color: #555;
     font: 95% Arial, Helvetica, sans-serif;
 }

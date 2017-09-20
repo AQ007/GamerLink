@@ -1,6 +1,31 @@
-<h1>Here are all the games</h1>
-<ul>
-<% @games.each do |game| %>
-<li><%= link_to(game.name, game_path(game)) %></li>
-<% end %>
-</ul>
+<div class="table-title">
+</div>
+
+
+<table class="table-fill">
+  <thead>
+    <tr>
+      <th class="text-left">Game Avatar</th>
+      <th class="text-left">Game Name</th>
+      <th class="text-left"># of Tournaments Available</th>
+    </tr>
+  </thead>
+
+  <tbody class="table-hover">
+    <% @games.each do |game| %>
+      <tr>
+        <td class="text-left">
+          <%= image_tag "#{game.avatar}" %>
+        </td>
+        <td class="text-left">
+          <%= link_to(game.name, game_path(game)) %>
+        </td>
+        <td class="text-left">
+          <%= link_to(game.tournaments.count, game_path(game)) %>
+        </td>
+
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>

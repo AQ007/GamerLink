@@ -1,8 +1,27 @@
-<h1> <%= @tournament.name %></h1>
-<h3>Players</h3>
-<ul>
 
-<% @tournament.users.each do |u| %>
-<li><%= link_to(u.username, user_path) %></li>
-<% end %>
-</ul>
+<div class="table-title">
+  <h3>
+    <%= @tournament.name %>
+    Players Listed Below
+  </h3>
+</div>
+
+
+<table class="table-fill">
+  <thead>
+    <tr>
+      <th class="text-left">Player</th>
+    </tr>
+  </thead>
+
+  <tbody class="table-hover">
+    <% @tournament.users.each do |u| %>
+      <tr>
+        <td class="text-left">
+          <%= link_to(u.username, u) %>
+        </td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>

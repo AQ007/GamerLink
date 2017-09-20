@@ -1,8 +1,30 @@
-<h1>Here is your game</h1>
-<h1><%= @game.name %></h1>
+<div class="table-title">
+  <h3>
+    Below a List of Tournaments that belong to..
+    <%= @game.name %>
+  </h3>
+</div>
 
-<h3>Tournaments available</h3>
+<table class="table-fill">
+  <thead>
+    <tr>
+      <th class="text-left">Tournament Name</th>
+      <th class="text-left"># of Participants</th>
+    </tr>
+  </thead>
 
-<% @game.tournaments.each do |g| %>
-<li><%=g.name%></li>
-<% end %>
+  <tbody class="table-hover">
+    <% @game.tournaments.each do |g| %>
+      <tr>
+        <td class="text-left">
+          <%=link_to g.name, tournament_path(g) %>
+        </td>
+        <td class="text-left">
+          <%=g.users.count%>
+        </td>
+
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
